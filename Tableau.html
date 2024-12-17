@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Oases in Food Deserts</title>
+    <style>
+        /* Style for centering and sizing the Tableau visualization */
+        #tableauViz {
+            width: 100%;
+            height: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Can You Believe This?</h1>
+    <div id="tableauViz"></div> <!-- Placeholder for the Tableau Viz -->
+
+    <!-- Tableau JavaScript API -->
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        // Function to embed Tableau visualization
+        function initViz() {
+            var containerDiv = document.getElementById("tableauViz"); // Target div
+            var url = "https://public.tableau.com/views/FindingOasesInFoodDeserts/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link";
+            
+            var options = {
+                hideTabs: true,       // Hides tabs
+                hideToolbar: false,   // Displays the toolbar
+                width: "100%",        // Makes viz responsive
+                height: "800px"       // Set visualization height
+            };
+
+            // Load Tableau visualization
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+
+        // Initialize on page load
+        window.onload = initViz;
+    </script>
+</body>
+</html>
+
+
+
+
+
